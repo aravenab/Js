@@ -230,6 +230,41 @@ function contacto (nombre, direccion, telefono, email){
 
 // 
 // ----------------------------------------------------------------------------- Clase 6 ---------------------------------------------------------------
+// Consejos GIT en el break
+// const Arrays[esto, es, un , array]
+
+// for (let index = 0; index < array.length; index++) {
+//     const element = array[index];
+//     console.log(array[index]) //así te muestra todo el array, con .length, te dice el largo del array, comenzando desde el 0 )
+// }
+
+// Agregar elementos al final del array * EL MÁS USADO
+// nombreDelArray.push("valor para agregar, puede ser como string o en numero")
+
+//agregar elementos al principio del array (desde la posición 0)
+// nombreDelArray.unshift("valor para agregar, puede ser como string o en numero")
+
+// quita ó elimina el elemento del final, solamente los elimina de a 1..... pop() 
+// nombreDelArray.pop()
+
+//elimina elementos al principio del array (desde la posición 0)
+// nombreDelArray.shift()
+
+//splice(inicio, cantidad de elementos a eliminar)
+//hacer un corte para eliminar determinada cantidad de elementos desde el inicio, como aparece arriba
+
+//slice(inicio, Final no incluido) el inicio debe ser menor al final no incluido (te trae el numero antes del final)
+
+//concat
+//este metodo une dos arrays, ejemplo: const arrayNuevo= array.concat()
+
+//indexof , devuelve la posición del elemento
+// console.log(array.indexof("juan")); y devuelve por ejemplo un 1, de la posicion en la que se encuentra juan
+
+
+//includes; este metodo devuelve true o false
+// en el ejemplo anterior, si ocupamos "juan" y en el array esta dicho valor, me devuelve true
+
 
 
 // ----------------------------------------------------------------------------- Clase 7 ---------------------------------------------------------------
