@@ -18,11 +18,21 @@
     <header>JavaScript</header>
     <main>
       <h1>Tercera Entrega - Calculo de IVA</h1>
-      <form class="container">
+      <form class="container formulario">
         <div class="mb-3">
-          <label for="monto" class="form-label">Monto</label>
-          <input type="number" class="form-control" id="monto" aria-describedby="montoHelp" />
-          <div id="montoHelp" class="form-text">Ingresa el monto número 1, 2 o 3 para calcular el Bruto de todos tus montos ingresados juntos</div>
+          <label for="monto1"  class="form-label">Monto</label>
+          <input type="number" name="nombre" class="form-control" id="monto" aria-describedby="montoHelp" />
+          <div id="monto1" class="form-text montoBuscado">Ingresa el monto número 1 para calcular el Bruto de tu monto ingresado</div>
+        </div>
+        <div class="mb-3">
+          <label for="monto2"  class="form-label">Monto</label>
+          <input type="number" name="nombre2" class="form-control" id="monto" aria-describedby="montoHelp" />
+          <div id="monto2" class="form-text montoBuscado">Ingresa el monto número  2 para calcular el Bruto de  tu monto ingresado</div>
+        </div>
+        <div class="mb-3">
+          <label for="monto3"  class="form-label">Monto</label>
+          <input type="number" name="nombre3" class="form-control" id="monto" aria-describedby="montoHelp" />
+          <div id="monto3" class="form-text montoBuscado">Ingresa el monto número 3 para calcular el Bruto de tu monto ingresado</div>
         </div>
         <button type="button" class="btn btn-primary" onclick="calcularMonto()">Calcular</button>
       </form>
@@ -31,28 +41,27 @@
         <table class="table">
           <thead>
             <tr>
-              <th scope="col">Monto</th>
-              <th scope="col">IVA</th>
-              <th scope="col">Total</th>
-              <th scope="col">Moneda</th>
+              <th scope="col" for="monto1"  id="resultado1" >1</th>
+              <th scope="col" for="monto2"  id="resultado2">2</th>
+              <th scope="col" for="monto3" id="resultado3">3</th>
             </tr>
           </thead>
           <tbody id="tablaResultados">
           </tbody>
         </table>
       </div>
-      <div class="container mt-5">
+      <!-- <div class="container mt-5">
         <h2>Buscar resultado por monto</h2>
         <form>
           <div class="mb-3">
             <label for="montoBuscado" class="form-label">Monto buscado</label>
-            <input type="number" class="form-control" id="montoBuscado" aria-describedby="montoBuscadoHelp" />
+            <input type="number" name="nombre2" class="form-control" id="montoBuscado" aria-describedby="montoBuscadoHelp" />
             <div id="montoBuscadoHelp" class="form-text">Ingresa el monto que deseas buscar</div>
           </div>
           <button type="button" class="btn btn-primary" onclick="buscarResultado()">Buscar</button>
         </form>
         <div id="resultadoBuscado"></div>
-      </div>
+      </div>  -->
     
     </main>
     <script src="./js/main.js"></script>
