@@ -121,16 +121,16 @@ const ivaInfo = {
   
   let resultados = [];
   
-  for (let i = 0; i < 3; i++) {
-    let mensaje = `Ingresa el monto número ${i + 1} para calcular el Bruto de todos tus montos ingresados juntos`;
-   // let monto = parseInt(prompt(mensaje));
-    if (monto <= 0) {
-      console.log("No se puede calcular el IVA de números negativos o de 0");
-      continue;
-    }
-    let resultado = calcular(monto, ivaInfo);
-    resultados.push(resultado);
-  }
+  // for (let i = 0; i < 3; i++) {
+  //   let mensaje = `Ingresa el monto número ${i + 1} para calcular el Bruto de todos tus montos ingresados juntos`;
+  // let monto = parseInt(prompt(mensaje));
+  //   if (monto <= 0) {
+  //     console.log("No se puede calcular el IVA de números negativos o de 0");
+  //     continue;
+  //   }
+  //   let resultado = calcular(monto, ivaInfo);
+  //   resultados.push(resultado);
+  // }
   
   resultados = resultados.filter(resultado => resultado.monto > 0);
   
@@ -157,6 +157,9 @@ let resultadoBuscado = buscarResultadoPorMonto(montoBuscado);
     const monto2 = parseFloat(document.getElementById("monto2").value);
     const monto3 = parseFloat(document.getElementById("monto3").value);
     
+    console.log(monto1);
+    console.log(monto2);
+    console.log(monto3);
     const bruto1 = monto1 * 1.19;
     const bruto2 = monto2 * 1.19;
     const bruto3 = monto3 * 1.19;
@@ -164,17 +167,56 @@ let resultadoBuscado = buscarResultadoPorMonto(montoBuscado);
     document.getElementById("resultado1").innerHTML = `El bruto de tu monto 1 es: ${bruto1}`;
     document.getElementById("resultado2").innerHTML = `El bruto de tu monto 2 es: ${bruto2}`;
     document.getElementById("resultado3").innerHTML = `El bruto de tu monto 3 es: ${bruto3}`;
-}
+  }
 
   
 
 
+// STORAGE
+
+// function calcularMonto() {
+//   // Obtener los valores de los inputs
+//   let monto1 = document.getElementById("monto1").value;
+//   let monto2 = document.getElementById("monto2").value;
+//   let monto3 = document.getElementById("monto3").value;
+
+//   // Convertir los valores de los inputs a números
+//   monto1 = parseFloat(monto1);
+//   monto2 = parseFloat(monto2);
+//   monto3 = parseFloat(monto3);
+
+// Calcular el bruto
+  let bruto = (monto1 + monto2 + monto3)* 1.19;
+
+//   // Guardar el valor del bruto en localStorage
+//   localStorage.setItem("bruto", bruto);
+
+//   // Mostrar el resultado
+//   document.getElementById("resultado").textContent = bruto;
+// }
+
+// Json ()
+const infoProyecto = {
+  curso: 'JavaScript',
+  comision:  52125,
+  empresa: 'CoderHouse',
+}
+const infoProyectoJson = JSON.stringify(infoProyecto);
+localStorage.setItem('infoProyecto', infoProyectoJson)
+
+console.log(infoProyectoJson)
 
 
+   //storage
+   //Guardar datos en localStorage
+  localStorage.setItem('proyecto','Proyecto creado por Tomás Aravena');
+  localStorage.setItem('edad', 26);
 
-
-
-
+  //  Recuperar datos de localStorage
+   const creadorProyecto = localStorage.getItem('proyecto');
+   const edad = localStorage.getItem('edad');
+   console.log(creadorProyecto); 
+   console.log(edad); 
 
 
 
@@ -189,6 +231,7 @@ let resultadoBuscado = buscarResultadoPorMonto(montoBuscado);
   
     // Agregar un listener al botón
     btn.addEventListener('click', () => {
+      
       console.log('¡Haz clickeado el botón!');
     });
   });
