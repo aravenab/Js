@@ -220,6 +220,9 @@ console.log(infoProyectoJson)
 
 
 
+
+ 
+
   // aqui esta el DOM + evento de click y cambio de nombre en js para html OK
   
   document.addEventListener('DOMContentLoaded', () => {
@@ -228,11 +231,61 @@ console.log(infoProyectoJson)
   
     // Cambiar el texto del botón
     btn.textContent = '¡Realizar el calculo!';
-  
+    
     // Agregar un listener al botón
     btn.addEventListener('click', () => {
-      
+      Swal.fire(
+        '¡Realizaste el calculo!',
+        'Puedes darle al ok y repetir el proceso las veces que desees',
+        'success'
+      )
       console.log('¡Haz clickeado el botón!');
     });
+  });
+  
+  const btn =document.querySelector(".btn");
+
+  // asincronia
+  setTimeout(()=>(
+    console.log("Sigues aquí?, si necesitas ayuda puedes llamarme al +569 81576344")
+  ), 5000)
+
+  btn.addEventListener('click', ()=>{
+    btn.classList.remove("btn-primary")
+    btn.classList.add("btn-warning")
+  })
+
+  //Promesas
+  const promesa = (res) => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        if (res === true) {
+          resolve("¡Entraste a mi proyecto!");
+        } else {
+          reject("Promesa rechazada");
+        }
+      }, 2500);
+    });
+  };
+  // console.log(promesa(true));
+
+  promesa(true).then((response)=> console.log(response));
+
+  //Fetch
+  const listaUl = document.querySelector("ul")
+  fetch("https://jsonplaceholder.typicode.com/posts/1")
+  .then((res)=> res.json(res))
+  .then((post)=>{
+    console.log(post);
+    console.log(post.userId);
+    console.log(post.title);
+    console.log(post.body);
+    // const li = document.createElement('li')
+    // li.className ="card";
+    // li.textContent =${post.title}
+    // li.innerHTML= `
+    // <h2> ${post.title} </h2>
+    // <p> ${post.body} </p>`
+    // listaUl.appendChild(li)
   });
   

@@ -10,6 +10,7 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="/css/style.css">
     <title>JavaScript</title>
    
     <link rel="stylesheet" href="style.css" />
@@ -34,7 +35,7 @@
           <input type="number" name="nombre3" class="form-control" id="monto3" aria-describedby="montoHelp" />
           <div id="monto3" class="form-text montoBuscado">Ingresa el monto número 3 para calcular el Bruto de tu monto ingresado</div>
         </div>
-        <button type="button" class="btn btn-primary" onclick="calcularMonto()">Calcular</button>
+        <button type="button" class="btn btn-warning" onclick="calcularMonto()">Calcular</button>
       </form>
       <div class="container mt-5">
         <h2>Resultados:</h2>
@@ -50,21 +51,13 @@
           </tbody>
         </table>
       </div>
-         <!-- <div class="container mt-5">
-        <h2>Buscar resultado por monto</h2>
-        <form>
-          <div class="mb-3">
-            <label for="montoBuscado" class="form-label">Monto buscado</label>
-            <input type="number" name="nombre2" class="form-control" id="montoBuscado" aria-describedby="montoBuscadoHelp" />
-            <div id="montoBuscadoHelp" class="form-text">Ingresa el monto que deseas buscar</div>
-          </div>
-          <button type="button" class="btn btn-primary" onclick="buscarResultado()">Buscar</button>
-        </form>
-        <div id="resultadoBuscado"></div>
-      </div>  -->
+    <ul></ul>
     
     </main>
+    <!-- Librerias -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>
+
 
